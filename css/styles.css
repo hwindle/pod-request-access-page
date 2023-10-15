@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Chivo', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  --bg-dark: hsl(224, 35%, 11%);
+  --fg-light: white;
+  --green: hsl(157, 74%, 62%);
+  --dark-navy: hsl(225, 26%, 23%);
+  --mid-navy: hsl(225, 21%, 45%);
+  --light-navy: hsl(225, 40%, 83%);
+  --error: #f23d3d;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--fg-light);
 }
