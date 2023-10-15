@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  Publish your podcasts everywhere.
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <header><h1>Pod</h1></header>
+      <div class="subtitle">
+        <h2>Publish your podcasts <span class="white-em">everywhere.</span></h2>
+      </div>
 
-  Request access
-</body>
+      <p class="description">
+        Upload your audio to Pod with a single click. We’ll then distribute your
+        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
+        more!
+      </p>
+      <div class="container-logos">
+        <a href="#" class="podcast-logo" id="spotify" aria-label="Spotify"></a>
+        <a
+          href="#"
+          class="podcast-logo"
+          id="apple"
+          aria-label="Apple podcasts"
+        ></a>
+        <a
+          href="#"
+          class="podcast-logo"
+          id="google"
+          aria-label="Google podcasts"
+        ></a>
+        <a
+          href="#"
+          class="podcast-logo"
+          id="pocket-casts"
+          aria-label="Pocket casts"
+        ></a>
+      </div>
+      <form>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email address"
+          aria-label="Email address"
+        />
+        <input type="submit" value="Request access" />
+      </form>
+    </main>
+  </body>
 </html>
