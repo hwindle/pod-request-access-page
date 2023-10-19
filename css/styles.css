@@ -19,13 +19,19 @@
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: hsla(224, 35%, 11%, 85%);
+  background-image: url('../assets/mobile/image-host.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-blend-mode: darken;
   color: var(--fg-light);
 }
 
 main {
   margin: 1.2rem;
 }
+
+/*** header styles ***/
 
 header h1.sr-only {
   display: hidden;
@@ -43,10 +49,35 @@ header h1.sr-only {
   margin: 3rem auto;
 }
 
+/*** subtitle styles ***/
+
+div.subtitle > h2 {
+  color: var(--green);
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+
+div.subtitle > h2 > span.white-em {
+  color: var(--fg-light);
+}
+
+/* adding line break in h2 element */
+div.subtitle > h2 > span.white-em::before {
+  content: '\a'; /* new line character */
+  white-space: pre;
+}
+
 /*** tablet media queries ***/
 @media screen and (min-width: 768px) {
   #header-logo {
     margin: 3rem auto 3rem 1.2rem;
+  }
+
+  div.subtitle > h2 {
+    text-align: left;
   }
 }
 
