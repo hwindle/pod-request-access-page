@@ -22,3 +22,33 @@ body {
   background-color: var(--bg-dark);
   color: var(--fg-light);
 }
+
+main {
+  margin: 1.2rem;
+}
+
+header h1.sr-only {
+  display: hidden;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+#header-logo {
+  background-image: url('../assets/desktop/logo.svg');
+  width: 135px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3rem auto;
+}
+
+/*** tablet media queries ***/
+@media screen and (min-width: 768px) {
+  #header-logo {
+    margin: 3rem auto 3rem 1.2rem;
+  }
+}
+
+
+/*** desktop media queries ***/
