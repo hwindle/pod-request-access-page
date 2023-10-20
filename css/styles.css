@@ -70,6 +70,71 @@ div.subtitle > h2 > span.white-em::before {
   white-space: pre;
 }
 
+/*** description para ***/
+p.description {
+  margin: 1rem auto;
+  color: var(--light-navy);
+  text-align: center;
+  max-width: 36ch;
+}
+
+/*** podcast icons ***/
+.container-logos {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.podcast-logo {
+  border: 1px solid transparent;
+  display: block;
+  padding: 0.3rem;
+}
+
+a.podcast-logo:hover, a.podcast-logo:focus {
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--light-navy);
+}
+
+a.podcast-logo#spotify {
+  background-image: url('../assets/desktop/spotify.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 25px;
+}
+
+a.podcast-logo#apple {
+  background-image: url('../assets/desktop/apple-podcast.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 25px;
+}
+
+a.podcast-logo#google {
+  background-image: url('../assets/desktop/google-podcasts.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 25px;
+}
+
+a.podcast-logo#pocket-casts {
+  background-image: url('../assets/desktop/pocket-casts.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 140px;
+  height: 25px;
+}
+
+
+
 /*** tablet media queries ***/
 @media screen and (min-width: 768px) {
   #header-logo {
@@ -78,6 +143,20 @@ div.subtitle > h2 > span.white-em::before {
 
   div.subtitle > h2 {
     text-align: left;
+  }
+
+  /* description paragraph */
+  p.description {
+    margin: 1rem 0;
+    max-width: 40ch;
+    text-align: left;
+  }
+
+  /* podcast logos */
+  .container-logos {
+    /* moves to the left */
+    width: 600px;
+    margin: 3rem 0;
   }
 }
 
