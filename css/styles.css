@@ -22,6 +22,7 @@
 }
 
 body {
+  height: 90vh;
   background-color: hsla(224, 35%, 11%, 85%);
   background-image: url('../assets/mobile/image-host.jpg');
   background-repeat: repeat-y;
@@ -32,6 +33,8 @@ body {
 
 main {
   margin: 1.2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /*** header styles ***/
@@ -199,6 +202,7 @@ input[type='submit']:focus {
     /* moves to the left */
     width: 600px;
     margin: 3rem 0;
+    order: 4;
   }
 
   /* email form - one line */
@@ -209,15 +213,88 @@ input[type='submit']:focus {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 70%;
     padding: 0.1rem;
     border-radius: 100px;
   }
 
-  input[type=submit] {
+  input[type='submit'] {
     margin: 0.1rem;
     width: auto;
+  }
+
+  /* tablet background */
+  body {
+    background-color: var(--bg-dark);
+    background-image: url('../assets/tablet/image-host.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 491px 767px;
+    background-blend-mode: normal;
+    /* flex stuff */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  header {
+    flex-grow: 1;
+  }
+
+  main {
+    background-color: var(--bg-dark);
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  div#green-dots {
+    position: relative;
+    width: 200px;
+    height: 156px;
+    margin-left: 1.2rem;
+    background-size: contain;
+    z-index: 1;
+    background-image: url('../assets/desktop/bg-pattern-dots.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
   }
 }
 
 /*** desktop media queries ***/
+@media screen and (min-width: 1270px) {
+  body {
+    background-image: url('../assets/desktop/image-host.jpg');
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 888px 640px;
+    background-blend-mode: normal;
+  }
+
+  header, main {
+    margin-left: 6rem;
+  }
+
+  main {
+    width: 50%;
+  }
+
+  header {
+    margin-top: 3rem;
+  }
+
+  div#green-dots {
+    position: absolute;
+    width: 200px;
+    height: 156px;
+    margin-left: 0;
+    right: 0;
+    top: 700px;
+    background-position: right center;
+  }
+}
