@@ -142,7 +142,7 @@ a.podcast-logo#pocket-casts {
 
 /*** email  form ***/
 form {
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   width: 100%;
 }
 
@@ -157,15 +157,24 @@ input {
   outline: none;
 }
 
-input[type='email'] {
+input#email {
   background-color: var(--dark-navy);
   color: var(--light-navy);
 }
 
-input[type='email']::placeholder {
+input#email::placeholder {
   /* firefox only */
   opacity: 1;
   color: var(--light-navy);
+}
+
+p.email-error {
+  visibility: hidden;
+  height: 1rem;
+  margin-left: 1rem;
+  color: var(--error);
+  font-size: 0.7rem;
+  font-weight: bolder;
 }
 
 input[type='submit'] {

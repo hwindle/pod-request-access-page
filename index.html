@@ -49,15 +49,20 @@
       </div>
       <form>
         <input
-          type="email"
+          type="text"
           name="email"
           id="email"
           placeholder="Email address"
           aria-label="Email address"
+          onchange="validateEmail()"
         />
-        <input type="submit" value="Request access" />
+        
+        <input type="submit" value="Request access" onclick="validateEmail()" />
       </form>
+      <p class="email-error"></p>
     </main>
     <div id="green-dots" aria-hidden="true"></div>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
